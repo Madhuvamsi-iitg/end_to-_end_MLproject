@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import dill # dill is another library which will help us to create pickle file.
 from sklearn.metrics import r2_score
+from sklearn.model_selection import GridSearchCV
 
 from src.exception import CustomException
 
@@ -28,9 +29,14 @@ def evaluate_models(X_train, y_train,X_test,y_test,models,param):
 
         for i in range(len(list(models))):
             model = list(models.values())[i]
-            
+            para=param[list(models.keys())[i]]
+
+            gs = GridSearchCV(model,para,cv=3)
+            gs.fit(X_train,y_train)
 
             
+
+            model.set_params(**gs.best_params_)
             
 
             
