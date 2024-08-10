@@ -1,11 +1,14 @@
-##end to end Machine learning project
+## End to end Machine learning project
 
 AWS deployment
 
 Docker Build checked
+
 Github Workflow
+
 Iam User In AWS
-Docker Setup In EC2 commands to be Executed
+
+## Docker Setup In EC2 commands to be Executed
 #optinal
 
 sudo apt-get update -y
