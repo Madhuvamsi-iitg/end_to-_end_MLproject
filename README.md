@@ -1,4 +1,4 @@
-## End to end Machine learning project
+## End to end Machine learning project - Student Performance prediction
 
 AWS deployment
 
